@@ -1,0 +1,110 @@
+/* <nav id='navbar'>
+        <div id='bigNavbar'>
+            <a href='./index.html' class='navOption'>Home</a>
+            <a href='./experience.html' class='navOption'>Experience</a>
+            <a href='./projects.html' class='navOption'>Projects</a>
+            <a href='./about.html' class='navOption'>About</a>
+        </div>
+    <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <div id='overlayNav' class='overlay'>
+        <div class='overlayContent'>
+            <a href='./index.html' class='navOption'>Home</a>
+            <a href='./experience.html' class='navOption'>Experience</a>
+            <a href='./projects.html' class='navOption'>Projects</a>
+            <a href='./about.html' class='navOption'>About</a>
+        </div>
+    </div>    
+    </nav>
+    
+    
+    
+    
+    
+    <script src='./header.js'></script>
+    */
+
+#bigNavbar{
+    display: none;
+}
+#navbar{
+
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+    font-family: open-sans, sans-serif;
+    font-weight: bold;
+}
+.overlay{
+    height: 100%;
+    width: 0;
+    top:0;
+    left:0;
+    background-color: rgba(1,1,1, 0.9);
+    position: fixed;
+    overflow-x: hidden;
+}
+.overlayContent {
+    text-align: center;
+    display: flexbox;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20%;
+  }
+  .overlay a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #f1f1f1;
+  }
+  .container {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #f0f0f0;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media(min-width: 768px){
+    #bigNavbar{
+        display: flex;
+        font-size: 1.15rem;
+        width: 40%;
+        justify-content: space-evenly;
+        color: #d3d3d3;
+    }
+    .navOption:hover{
+        color: white;
+    }
+    .container{
+        display: none;
+    }
+    #navbar{
+        justify-content: flex-end;
+    }
+    .overlay{
+        display: none;
+    }
+}

@@ -1,11 +1,34 @@
 body{
-    background-color: mediumspringgreen;
+    background-color: #101010;
+    color: #f0f0f0;
+    margin: 20px;
 }
-#text{
+a{
+    color: inherit;
+    text-decoration: none;
+}
+#intro{
+    color: #f0f0f0;
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
-    text-align: center;
-    color: white;
-    height: 80vh;
+    font-family: inter, sans-serif;
+    max-width: 700px;
+}
+#personalDescription{
+    color: lightgray;
+    font-size: 1.1rem;
+}
+#headerIntro{
+    font-size: 3.5rem;
+    padding: 1px;
+    margin-bottom:0;
+}
+@media(min-width: 768px){
+    #headerIntro{
+        font-size: 5.8rem;
+    }
+    body{
+        margin-left: 70px;
+        margin-right: 70px;
+    }    
 }
